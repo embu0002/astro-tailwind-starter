@@ -1,15 +1,46 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
+
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+  <article>
+    <h1>OVERSKRIFT</h1>
+    <div class="flex flex-col md:flex-row items-center gap-5 max-w-5xl mx-auto px-3 py-6">
+      <div class="flex-1">
+        <img src="https://picsum.photos/seed/picsum/400/300" alt="billede" class="rounded-lg shadow-md" />
+      </div>
+
+      <div class="flex-1">
+        <p class="text-lg text-gray-700 mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, ducimus iusto quam libero id illum expedita incidunt. Culpa, cum rem in ea, temporibus voluptate quo voluptates officia recusandae adipisci illo?</p>
+        <Button>Klik!</Button>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-col items-center gap-5 max-w-5xl mx-auto px-3 py-6">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum adipisci accusantium sunt possimus nulla consequuntur aliquam eos deleniti, itaque placeat ex repellendus maxime molestiae modi odit. Consectetur, magnam. Recusandae, in.</p>
+      <img src="https://picsum.photos/200/300?grayscale" alt="billede" />
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam natus, in iste soluta corporis ipsum vero! Fugiat porro quis, eaque quae mollitia omnis in consectetur, accusantium dignissimos minima a asperiores.</p>
+      <Button>Klik!</Button>
+    </div>
+    <div class="flex flex-col md:flex-row items-center gap-5 max-w-5xl mx-auto px-3 py-6">
+      <div>
+        <img src="https://picsum.photos/id/237/200/300" alt="billede" />
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum maxime corporis iusto excepturi cumque eaque at architecto ea debitis facere, dolor temporibus sit, provident, quas earum. Eos consequuntur quae quasi.</p>
+      </div>
+      <div>
+        <img src="https://picsum.photos/id/237/200/300" alt="billede" />
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum maxime corporis iusto excepturi cumque eaque at architecto ea debitis facere, dolor temporibus sit, provident, quas earum. Eos consequuntur quae quasi.</p>
+      </div>
+      <div>
+        <img src="https://picsum.photos/id/237/200/300" alt="billede" />
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum maxime corporis iusto excepturi cumque eaque at architecto ea debitis facere, dolor temporibus sit, provident, quas earum. Eos consequuntur quae quasi.</p>
+      </div>
+    </div>
+
+    <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
+    <Image src={thumbsup} alt="" />
+  </article>
 </MainLayout>
